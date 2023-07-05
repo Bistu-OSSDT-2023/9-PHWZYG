@@ -1,0 +1,65 @@
+#container {
+  height: 700px;
+  border: 1px solid red
+}
+
+
+#toolbar {
+  height: 100px
+}
+
+toolbar .button {
+  border: 2;
+  background-color: aqua;
+  width: 100px;
+  height: 50px;
+
+}
+
+#btns {
+  float: left
+}
+
+#imgs {
+  float: left
+}
+
+#imgs img {
+  width: 30px;
+  height: 30px
+}
+
+#left {
+  float: left;
+  width: 60%;
+  height: 600px;
+  border: 1px solid green
+}
+
+#right {
+  float: left;
+  width: 29%;
+  height: 600px;
+  border: 1px solid blue
+}
+
+header .header_text {
+  display: inline-block;
+  /* border: 1px solid black; */
+  text-align: center;
+  line-height: 47px;
+  font-weight: 700;
+  color: #ffffff;
+  width: 121px;
+  height: 43px;
+  margin-left: 296px;
+  margin-top: 9px;
+  vertical-align: bottom;
+  position: relative;
+}
+
+header .header_text:hover {
+  background-color: #fff;
+  color: red;
+  font-weight: 400;
+}

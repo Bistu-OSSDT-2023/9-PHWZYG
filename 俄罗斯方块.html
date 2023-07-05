@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+<meta charset="UTF-8">
+<title>teris.html</title>
+<style>
+	/*设置id = whole_screen内的div为并排显示*/
+	#whole_screen div.map_layout {
+		/*内部标签居中显示*/
+		text-align: center;
+	}
+	/*设置id=map的标签下的table标签的属性*/
+	#map table {
+		/* 表格间距 */
+		border-spacing: 5px;
+	}
+	/*设置id = map的标签下table和td标签属性*/
+	#map table, td {
+		/*设置边框: 宽度为1的黑色实心线*/
+		border: 3px solid grey;
+		/*设置单元格和表格的边框合一: 没有单元格边距*/
+		//border-collapse:collapse;
+	}
+	/*设置id = map的标签下table中的td标签属性(只设置标签的属性)*/
+	#map table td {
+		/*背景颜色设置*/
+		background-color: black;
+		/*设置td单元格的宽度*/
+		width: 50px;
+		height: 50px;
+		/*设置阴影*/
+		box-shadow: 10px 10px 5px #888888;
+	
+	}
+
+	#map h2.map_head {
+		/*指定字体类型: 不在意什么类型*/
+		font-fambody[i].y: sans-serif;
+		/* 字体大小: 较大 */
+		font-size: x-large;
+		text-align: center;
+		background-color: RGB（32,178,170）;
+		color: black;
+	}
+
+</style>
+<script src="js/tetris.js"></script>
+<script>
+function TetrisGame(t_id, width, height) {
+	this.createMap = function (t_id, width, height) {
+		var table = document.getElementById(t_id);
+		var new_row = null;
+		for (var i = 0; i < height; i++) {
+			new_row = table.insertRow(i);
+			for (var j = 0; j < width; j++) {
+				new_row.insertCell(j);
+			}
+		}
+	}
+	this.drawMap = function (map, full_style, empty_style) {
+		var tb = document.getElementById(this.t_id);
+		for (var i = 0; i < map.length; i++) {
+			for (var j = 0; j < map[i].length; j++)
+				tb.rows[i].cells[j].style = map[i][j]?full_style:empty_style;
+		}
+	}
+	this.drawTetris = function (tetris, style) {
+		var tb = document.getElementById(this.t_id);
+		for (var i = 0 ; i < tetris.length; i++) {
+			tb.rows[tetris[i].y].cells[tetris[i].x].style = style;
+		}
+	}
+	this.moveTetris = function (tetris) {
+		this.old_tetris = this.new_tetris;
+		this.new_tetris = tetris;
+		if (this.old_tetris != undefined)
+			this.drawTetris(this.old_tetris, "background:black;");
+		this.drawTetris(this.new_tetris, "background:white;")
+	}
+	this.getTimeoutFunc = function () {
+		var father = this;
+		return function () {
+			father.tetris_console.dropTetris();
+			father.update();
+			if (father.tetris_console.getState() != "DEAD")
+				window.setTimeout(father.getTimeoutFunc(), father.speed * father.time_span);
+		}
+	}
+	this.getKeydownFunc = function () {
+		var father = this;
+		var keys = {"ArrowUp":"UP","ArrowDown":"DOWN","ArrowLeft":"LEFT","ArrowRight":"RIGHT"};
+		return function (event) {
+			if (father.tetris_console.getState() != "DEAD")
+				father.tetris_console.keydown(keys[event.key]);
+			father.update();
+		}
+	}
+	this.update = function () {
+		var state = this.tetris_console.getState();
+		switch(state) {
+			case "MOVE":
+				this.moveTetris(this.tetris_console.getTetris());
+				break;
+			case "NEW":
+				this.new_tetris = null;
+				this.moveTetris(this.tetris_console.getTetris());
+				break;
+			case "DEAD":
+				alert("Game Over!");
+				break;
+			case "UPDATE":
+				this.new_tetris = null;
+				this.drawMap(this.tetris_console.map, "background:white;", "blackground:black;");
+				break;
+		}
+	}
+	this.run = function() {
+		this.createMap(this.t_id, this.width, this.height);
+		this.tetris_console = new TetrisConsole(this.width, this.height);
+		document.onkeydown = this.getKeydownFunc();
+		window.setTimeout(this.getTimeoutFunc(), this.speed*this.time_span);
+	}
+	this.t_id = t_id;
+	this.height = height;
+	this.width = width;
+	this.speed = 10;
+	this.time_span = 100;
+	return this;
+}
+var tetris_game = null;
+</script>
+
+</head>
+<div class="header_text" style="position: absolute; top: 0; font-size: 2.5em;"><a href="index.html">首页</a></div>
+<body style="background-image: url('back.png'); background-size: cover;">
+	
+	<div id="whole_screen">
+		<!--设置模块距离边缘的距离上下居中，距离页面左右距离为300px-->
+		<div style="margin:auto 300px">
+			<div id="map" style="float:left">
+				<h2 class="map_head">俄罗斯方块</h2>
+				<table id = "tetris_map">
+				</table>
+				<script>
+					tetris_game = new TetrisGame("tetris_map", 8, 12);
+					tetris_game.run();
+				</script>
+			</div>
+			<div>
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>

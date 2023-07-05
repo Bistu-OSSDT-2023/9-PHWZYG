@@ -1,0 +1,972 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* 头部部分 */
+header {
+    position: relative;
+    width: 1000px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    margin: 0 auto;
+    background:
+        linear-gradient(to bottom, rgb(57, 185, 240), rgb(75, 226, 237), rgb(102, 184, 235));
+    border-radius: 10px;
+}
+
+/* 头部图片 */
+header .pho {
+    position: absolute;
+    width: 247px;
+    height: 45px;
+    left: 25px;
+    top: 0;
+}
+
+/* 头部首页文字 */
+header .header_text {
+    display: inline-block;
+    /* border: 1px solid black; */
+    text-align: center;
+    line-height: 47px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 121px;
+    height: 43px;
+    margin-left: 296px;
+    margin-top: 9px;
+    vertical-align: bottom;
+    position: relative;
+}
+
+/*首页点击效果 */
+header .header_text:hover {
+    background-color: #fff;
+    color: red;
+    font-weight: 400;
+}
+
+/* 头部导航栏 */
+.header_nav {
+    width: 250px;
+    height: 18px;
+    line-height: 18px;
+    float: right;
+    margin-top: 17px;
+    margin-right: 20px;
+}
+
+/* 头部导航栏文字 */
+.navs li {
+    width: 57px;
+    height: 16px;
+    float: left;
+    /* padding-left: 12px; */
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 16px;
+
+}
+
+/* 头部导航栏竖线 */
+.navs li {
+    border-right: 1px solid #ffffff;
+}
+
+/* 最后一个竖线隐藏 */
+.header_nav .lastnav {
+    border-right: 1px solid transparent;
+}
+
+/* 内容板块 */
+article {
+    position: relative;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+    width: 1000px;
+    height: 260px;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+/* 左边选框 */
+.rightbox {
+    width: 180px;
+    height: 239px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+article .rightbox ul a {
+    color: black;
+}
+
+/* 右侧边栏li得设置 */
+article .rightbox ul li {
+    position: relative;
+    width: 180px;
+    height: 35px;
+    /* border: 1px solid blue; */
+    background-image: url("cover.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+article .rightbox ul li:hover {
+    background-image: url(cover.jpg);
+}
+
+/*第一个和最后一个li的边角设置 */
+.first {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.last {
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+}
+
+/* 小图标设置 */
+.icon {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+/* 导航栏文字设置 */
+.rightbox .uls li span {
+    position: absolute;
+    left: 37px;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+/* 中间背景 */
+
+.middlebox {
+    position: absolute;
+    left: 210px;
+    top: 7px;
+    width: 510px;
+    height: 220px;
+    /* border: 1px solid red; */
+}
+
+.middlebg {
+    width: 100%;
+    height: 100%;
+    /* 背景图片 */
+    background-image: url(cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+/* 轮播按钮框 */
+.pointer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    height: 25px;
+    /* border: 1px solid red; */
+}
+
+/* 轮播按钮 */
+.middlebox .pointer li {
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #cfcac0;
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid black; */
+    text-align: center;
+    line-height: 20px;
+}
+
+.middlebox .pointer li:first-of-type {
+    color: #fff;
+    background-color: #e0563e;
+}
+
+/* 轮播按钮点击效果 */
+.middlebox .pointer li:hover {
+    color: #fff;
+    background-color: #c72a19;
+}
+
+.inputs {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 243px;
+    height: 238px;
+    border-radius: 10px;
+    border: 1px solid rgb(234, 234, 234);
+    background-color: #fafafa;
+}
+
+/* 登录标题 */
+.inputs h4 {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-weight: 400;
+    color: #4b4b4b;
+}
+
+/* 账号框 */
+.inputs .entry {
+    position: absolute;
+    top: 70px;
+    left: 14px;
+    width: 200px;
+    height: 23px;
+    /* border: 1px solid red; */
+}
+
+.inputs .entry .entryname {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    /* border: 1px solid blue; */
+}
+
+.inputs .entry .entrykuang input {
+    position: absolute;
+    right: -2px;
+    top: 1px;
+    width: 150px;
+    height: 20px;
+    /* border: 1px solid black; */
+    font-size: 10px;
+    color: rgb(143, 143, 143);
+    line-height: 20px;
+    text-indent: 1em;
+}
+
+.psw {
+    position: absolute;
+    left: 14px;
+    top: 117px;
+    width: 200px;
+    height: 23px;
+    /* border: 1px solid red; */
+}
+
+.entrypsw {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.pswkuang input {
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    width: 150px;
+    height: 20px;
+    /* border: 1px solid black; */
+    font-size: 10px;
+    color: rgb(143, 143, 143);
+    line-height: 20px;
+    text-indent: 1em;
+}
+
+.buttons {
+    position: absolute;
+    right: 85px;
+    bottom: 50px;
+    width: 75px;
+    height: 25px;
+    border: 1px solid #db2c35;
+
+}
+
+.buttonbg {
+    width: 73px;
+    height: 23px;
+    background-color: #db2c35;
+    margin: 1px 1px;
+    color: #fff;
+    text-align: center;
+    line-height: 23px;
+}
+
+.entrybottom {
+    position: absolute;
+    left: 37px;
+    bottom: 12px;
+    width: 170px;
+    height: 25px;
+    /* border: 1px solid red; */
+}
+
+.entrybottom .lijizhuce {
+    float: left;
+    width: 64px;
+    height: 25px;
+    color: #65768a;
+    /* border: 1px solid blue; */
+}
+
+.inputs a {
+    text-decoration: none;
+}
+
+.entrybottom .wangjimima {
+    float: right;
+    width: 64px;
+    height: 25px;
+    /* border: 1px solid blue; */
+}
+
+/* 全部游戏界面 */
+.allgame {
+    position: relative;
+    width: 719px;
+    height: 250px;
+    border: 1px solid rgb(215, 215, 215);
+    margin-top: 23px;
+    border-radius: 10px;
+}
+
+/* 游戏板块标题背景 */
+.gametitle {
+    width: 717px;
+    height: 35px;
+    border: 1px solid transparent;
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background:
+        linear-gradient(to bottom, rgb(247, 247, 248), rgb(245, 244, 244), rgb(241, 242, 241));
+}
+
+/* 游戏板块li制作 */
+.allgame .gametitle ul {
+    width: 350px;
+    height: 20px;
+    /* border: 1px solid black; */
+    margin-top: 7px;
+}
+
+/*全部游戏板块 li制作 */
+.allgame .gametitle ul li {
+    float: left;
+    width: 85px;
+    height: 20px;
+    border-right: 1px solid rgb(142, 151, 161);
+    font-size: 10px;
+    color: rgb(142, 151, 161);
+    text-align: center;
+    line-height: 20px;
+}
+
+/*游戏板块第一个li设置 */
+article .allgame .gametitle ul li:first-child {
+    color: red;
+    font-weight: 700;
+    border-right: 1px solid transparent;
+}
+
+/*游戏板块第一个li设置 */
+article .allgame .gametitle ul li a {
+    text-decoration: none;
+    color: rgb(157, 86, 96);
+}
+
+/*游戏板块第一个li设置 */
+article .allgame .gametitle ul li a:hover {
+    background-color: skyblue;
+}
+
+/*游戏板块最后一个li设置 */
+article .allgame .gametitle ul li:last-child {
+    border-right: 1px solid transparent;
+}
+
+/* 游戏介绍模块 */
+.introdution1 {
+    width: 325px;
+    height: 165px;
+    border: 2px solid rgb(234, 234, 234);
+    border-radius: 10px;
+    position: absolute;
+    left: 25px;
+    top: 325px;
+}
+
+.introdution2 {
+    width: 325px;
+    height: 165px;
+    border: 2px solid rgb(234, 234, 234);
+    border-radius: 10px;
+    position: absolute;
+    right: 305px;
+    top: 325px;
+}
+
+/* 游戏模块图片 */
+.introdution1 img {
+    width: 155px;
+    margin-left: 10px;
+    margin-top: 26px;
+    transition: all 1s;
+}
+
+/* 图片过渡动画 */
+.introdution1:hover img {
+    transform: translateX(-10px);
+}
+
+/* 游戏模块文字 */
+.introdution1 .introdutiontext {
+    position: absolute;
+    top: 21px;
+    right: 1px;
+    width: 150px;
+    height: 90px;
+    /* border: 1px red solid; */
+
+}
+
+.introdution1 .introdutiontext p {
+    font-size: 5px;
+    line-height: 22px;
+    font-weight: 700px;
+}
+
+.introdution1 .introdutiontext p span {
+    color: rgb(172, 13, 13);
+}
+
+/* .introdution1 .introdutiontext .button1 {
+    width: 48px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(191, 192, 192);
+    border-radius: 3px;
+    color: rgb(82, 80, 79);
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+} */
+
+.introdution1 .introdutiontext .button2 {
+    width: 65px;
+    height: 20px;
+    margin-top: 5px;
+    background:
+        linear-gradient(to bottom, rgb(123, 192, 210), rgb(55, 108, 156));
+    border: 1px solid rgb(191, 192, 192);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+}
+
+/* 游戏模块图片 */
+.introdution2 img {
+    width: 155px;
+    margin-left: 10px;
+    margin-top: 26px;
+    transition: all .5s;
+}
+
+/* 图片过渡动画 */
+.introdution2 img:hover {
+    transform: translateX(-10px);
+}
+
+.introdution1 .photo1 {
+    width: 155px;
+    margin-left: 10px;
+    margin-top: 26px;
+    transition: all .5s;
+}
+
+.introdution1:hover .photo1 {
+    transform: translateX(-10px);
+}
+
+/* 游戏模块文字 */
+.introdution2 .introdution2text {
+    position: absolute;
+    top: 21px;
+    right: 1px;
+    width: 150px;
+    height: 90px;
+    /* border: 1px red solid; */
+}
+
+.introdution2 .introdution2text p {
+    font-size: 10px;
+    line-height: 22px;
+    font-weight: 700px;
+}
+
+.introdution2 .introdution2text p span {
+    color: rgb(172, 13, 13);
+}
+
+/* .introdution2 .introdution2text .button3 {
+    width: 48px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(191, 192, 192);
+    border-radius: 3px;
+    color: rgb(82, 80, 79);
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+} */
+
+.introdution2 .introdution2text .button4 {
+    width: 65px;
+    height: 20px;
+    margin-top: 5px;
+    background:
+        linear-gradient(to bottom, rgb(123, 192, 210), rgb(55, 108, 156));
+    border: 1px solid rgb(191, 192, 192);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 19px;
+    text-align: center;
+}
+
+/* 新闻公告 */
+.news {
+    position: absolute;
+    top: 267px;
+    right: 0px;
+    width: 243px;
+    height: 245px;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 10px;
+}
+
+.news .newstitle {
+    width: 100%;
+    height: 35px;
+    background:
+        linear-gradient(to bottom, rgb(247, 247, 248), rgb(245, 244, 244), rgb(241, 242, 241));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.news .newstitle p {
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(148, 56, 55);
+    font-weight: 700;
+    font-size: 14px;
+    width: 70px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    /* border: 1px solid red; */
+}
+
+.news .newstext {
+    width: 243px;
+    height: 210px;
+    /* border: 1px solid red; */
+}
+
+.news .newstext ul li {
+    margin-left: 6px;
+    width: 230px;
+    height: 29.1px;
+    border-bottom: 1px dashed rgb(217, 217, 217);
+    /* 背景 */
+    background-image: url(cover.jpg);
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    font-size: 10px;
+    text-indent: 54px;
+    line-height: 29.1px;
+    transition: all .3s;
+}
+
+.news .newstext ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.news .newstext ul li:hover {
+    transform: scale(1.1, 1.1);
+}
+
+article .news .newstext ul li:last-child {
+    border-bottom: 1px dashed transparent;
+}
+
+/* 角色扮演板块 */
+
+.rollplay {
+    width: 719px;
+    height: 498px;
+    border: 1px solid rgb(215, 215, 215);
+    margin-top: 23px;
+    border-radius: 10px;
+}
+
+.rolltitle {
+    width: 100%;
+    height: 35px;
+    border: 1px solid transparent;
+    margin-top: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background:
+        linear-gradient(to bottom, rgb(247, 247, 248), rgb(245, 244, 244), rgb(241, 242, 241));
+}
+
+.rolltitletext {
+    width: 70px;
+    height: 35px;
+    /* border: 1px solid blue; */
+    text-align: center;
+    line-height: 35px;
+    color: rgb(146, 55, 57);
+    font-size: 10px;
+    font-weight: 700;
+    text-indent: 11px;
+}
+
+/* .rollplaymiddle {
+    height: 387px;
+    width: 100%;
+    border: 1px solid red;
+} */
+.rollplaymiddle ul li {
+    display: inline-block;
+    width: 150px;
+    height: 205px;
+    /* border: 1px solid red; */
+    margin-left: 19px;
+    margin-top: 19px;
+}
+
+/* 角色扮演 图片 */
+.rollplaymiddle .rollplaypho {
+    float: left;
+    width: 150px;
+    height: 100px;
+    /* border: 1px solid red; */
+}
+
+/* 角色扮演图片设置 */
+.rollplaymiddle .rollplaypho img {
+    width: 150px;
+    height: 100px;
+    transition: all .5s;
+}
+
+/* 角色扮演图片过渡 */
+.rollplaymiddle .rollplaypho:hover img {
+    transform: translateX(-10px);
+}
+
+/* 角色扮演文字版块 */
+.rollplaymiddle .rollplaytext {
+    float: left;
+    width: 126px;
+    height: 102px;
+    /* border: 1px solid blue; */
+    margin-left: 11px;
+}
+
+/* 角色扮演文字区域 */
+.rollplaymiddle .rollplaytext p {
+    color: black;
+    font-size: 10px;
+    font-weight: 530;
+    line-height: 25px;
+}
+
+/* 角色扮演文字加色 */
+.rollplaymiddle .rollplaytext p span {
+    color: rgb(163, 35, 65);
+    font-weight: 550;
+}
+
+/* 角色扮演按钮
+.rollplaymiddle .rollplaytext p .rollbutton1 {
+    width: 40px;
+    height: 30px;
+    line-height: 27px;
+    text-align: center;
+    border: 2px solid rgb(220, 222, 225);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 10px;
+} */
+
+/* 角色扮演按钮 */
+.rollplaymiddle .rollplaytext p .rollbutton2 {
+    width: 69px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    background:
+        linear-gradient(to bottom, rgb(123, 192, 210), rgb(55, 108, 156));
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* 左侧微博板块 */
+.weibo {
+    position: absolute;
+    top: 570px;
+    right: 0px;
+    width: 243px;
+    height: 155px;
+    /* border: 1px solid red; */
+}
+
+/* 腾讯微博 */
+.tengxunweibo {
+    width: 243px;
+    height: 65px;
+    /* border: 1px solid red; */
+}
+
+.tengxunweibo img {
+    width: 243px;
+    height: 65px;
+}
+
+/* 新浪微博 */
+.xinlangweibo {
+    margin-top: 20px;
+    width: 243px;
+    height: 65px;
+    /* border: 1px solid red; */
+}
+
+.xinlangweibo img {
+    width: 243px;
+    height: 65px;
+}
+
+/* 游戏视频板块 */
+.gamevideo {
+    position: absolute;
+    top: 755px;
+    right: 0px;
+    width: 243px;
+    height: 275px;
+    border-radius: 10px;
+    border: 1.3px solid rgb(214, 214, 214);
+}
+
+/* 游戏视频标题 */
+.gamevideo .gamevideotitle {
+    height: 35px;
+    width: 243px;
+    background-color: rgb(245, 244, 244);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+/* 游戏视频标题文字 */
+.gamevideo .gamevideotitle p {
+    width: 71px;
+    height: 35px;
+    /* border: 1px solid blue; */
+    text-align: center;
+    line-height: 35px;
+    color: rgb(146, 55, 57);
+    font-size: 15px;
+    font-weight: 700;
+    text-indent: 11px;
+}
+
+/* 游戏视频上小框 */
+.gamevideo1 {
+    width: 235px;
+    height: 120px;
+    margin-left: 4px;
+    border-bottom: 1px dashed rgb(204, 203, 203);
+}
+
+/* 游戏视频图片 */
+.gamevideo .gamevideopho {
+    left: 9px;
+    top: 43px;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    /* border: 1px solid red; */
+}
+
+/* 游戏视频图片 */
+.gamevideo .gamevideopho img {
+    width: 120px;
+    height: 100px;
+    display: block;
+    transition: all .1s;
+}
+
+.gamevideo .gamevideopho:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.gamevideo .gamevideopho:hover .blackbg {
+
+    display: block;
+}
+
+.gamevideo .gamevideopho .gamevideotext {
+    position: absolute;
+    top: 0px;
+    left: 126px;
+    width: 107px;
+    height: 100px;
+    /* border: 1px solid red; */
+}
+
+.gamevideo .gamevideopho .gamevideotext p {
+    font-size: 10px;
+    line-height: 28px;
+    color: rgb(68, 126, 167);
+}
+
+.gamevideo .gamevideopho .gamevideotext a {
+    text-decoration: none;
+}
+
+.gamevideo1 .gamevideopho .blackbg {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 135px;
+    height: 118px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.gamevideo2 {
+    width: 235px;
+    height: 115px;
+    margin-left: 4px;
+    /* border: 1px solid red; */
+}
+
+/* 游戏视频图片 */
+.gamevideo .gamevideopho1 {
+    left: 8px;
+    top: 166px;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    /* border: 1px solid red; */
+}
+
+.gamevideo .gamevideopho1 img {
+    width: 120px;
+    height: 100px;
+}
+
+.gamevideo .gamevideopho1 .gamevideotext1 {
+    position: absolute;
+    top: 0px;
+    left: 126px;
+    width: 107px;
+    height: 100px;
+    /* border: 1px solid red; */
+}
+
+.gamevideo .gamevideopho1 .gamevideotext1 p {
+    font-size: 10px;
+    line-height: 28px;
+    color: rgb(68, 126, 167);
+}
+
+.gamevideo .gamevideopho1 .gamevideotext1 a {
+    text-decoration: none;
+}
+
+/* 页脚 */
+.footers {
+    width: 1003px;
+    height: 90px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 1038px;
+    left: -1px;
+}
+
+.footers .guanyuwomen {
+    width: 313px;
+    height: 35px;
+    /* border: 1px solid blue; */
+    border-bottom: 1px solid rgb(226, 226, 226);
+    font-size: 10px;
+    color: rgb(49, 102, 167);
+    line-height: 55px;
+    position: absolute;
+    top: 20px;
+    left: -1px;
+}
+
+
+.footers .guanyuwomen ul li {
+    float: left;
+    padding-left: 10px;
+}
+
+.footers .guanyuwomen ul li:first-child {
+    padding-left: 0px;
+}
+
+.footers .wangyezhushi {
+    width: 605px;
+    height: 35px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 20px;
+    right: -1px;
+    line-height: 55px;
+    font-size: 10px;
+    color: rgb(122, 122, 122);
+}
+
+.footers .wangyezhushi li {
+    float: left;
+    padding-left: 14px;
+}

@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+   <link rel="stylesheet" href="css/puzzle.css" />
+   <script type="text/javascript" src="js/puzzle.js"></script>
+
+ </head>
+ <body onload="start()">
+	<div><h1 style="text-align: center;"><a href="index.html">首页</a></h1></div>
+   <div id="container">
+      <!--工具条-->
+      <div id="toolbar">
+	    <div id="btns">
+		   <input type="button" value="简单" onclick="initGame(2)"/>&nbsp;&nbsp;
+		   <input type="button" value="高级" onclick="initGame(4)"/>
+		</div>
+		<div id="imgs" style="margin-left:50px">
+		   <img  src="images/puzzle/puzzleone.jpg" alt="" onclick="changeCankao(this)" />&nbsp;&nbsp;
+		   <img  src="images/puzzle/puzzletwo.jpg" alt="" onclick="changeCankao(this)"/>&nbsp;&nbsp;
+		   <img  src="images/puzzle/puzzlethree.jpg" alt="" onclick="changeCankao(this)"/>&nbsp;&nbsp;
+		   <img  src="images/puzzle/puzzlefour.jpg" alt="" onclick="changeCankao(this)"/>&nbsp;&nbsp;
+		</div>
+	  </div>
+	  <!--拼图区域-->
+	  <div id="left">
+	     <canvas id="puzzle" width="600" height="600" onclick="move(event)">
+		 
+		 </canvas>
+	  
+	  </div>
+
+	  <div id="right">
+	     <img id="cankao" src="images/puzzle/puzzleone.jpg" alt=""  style="height:400px;width: 400px;"/>
+	  </div>
+   
+   </div>
+ </body>
+</html>

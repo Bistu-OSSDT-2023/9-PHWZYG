@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ssheji.css">
+</head>
+
+<body>
+    <!-- 顶部板块 -->
+    <header>
+        <div class="pho"><img src="images/PHWZYG.jpg" style="width: 100px;height: 50px;"></div>
+        <div class="header_text" onclick="refreshPage()">首页</div>
+        <script>
+            function refreshPage() {
+                location.reload();
+            }
+        </script>
+        <div class="header_nav">
+            <ul class="navs">
+                <li><a href="#">注册</a></li>
+                <li>登录</li>
+                <li>帮助</li>
+                <li class="lastnav">更多</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 内容版块 -->
+    <article>
+        <div class="rightbox">
+            <ul class="uls">
+                <a href="paino.html">
+                    <li class="first">
+                        <img src="images/index/paino.jpg" style="width: 100px;height: 45px;" class="icon"><span>钢琴块</span>
+                    </li>
+                <a href="俄罗斯方块.html">
+                    <li>
+                        <img src="images/index/eluo.png" style="width: 100px;height: 45px;" class="icon"><span>俄罗斯方块</span>
+                    </li>
+                </a>
+                <a href="wuziqi.html">
+                    <li>
+                        <img src="images/index/wuziqi.jpg" style="width: 150px;height: 45px;" class="icon"><span>五子棋</span>
+                    </li>
+                </a>
+                <a href="puzzle.html">
+                    <li>
+                        <img src="images/index/puzzle.jpg" style="width: 100px;height: 45px;" class="icon"><span>拼图</span>
+                    </li>
+                </a>
+                <a href="snack.html">
+                    <li>
+                        <img src="images/index/snack.jpg" style="width: 100px;height: 45px;" class="icon"><span>贪吃蛇</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <!-- 中间背景 -->
+        <div class="middlebox">
+            <div class="middlebg">
+                <ul class="pointer">
+                    <li class="firstchild">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 右侧登录图 -->
+        <div class="inputs">
+            <h4><img src="images/PHWZYG.jpg" style="width: 50px;height: 50px;">用户登录</h4>
+            <div class="entry">
+                <div class="entryname">
+                    账号：
+                </div>
+                <div class="entrykuang">
+                    <input type="text" placeholder="字母、数字的六位字符">
+                </div>
+            </div>
+            <div class="psw">
+                <div class="entrypsw">
+                    密码：
+                </div>
+                <div class="pswkuang">
+                    <input type="password" placeholder="四位数字">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div class="buttonbg">
+                    登 录
+                </div>
+            </div>
+
+            <div class="entrybottom">
+                <span class="lijizhece"><a href="#">立即注册</a></span>
+                <span class="wangjimima"><a href="#">忘记密码</a></span>
+            </div>
+        </div>
+
+        <!-- 全部游戏界面 -->
+        <div class="allgame">
+            <div class="gametitle">
+                <ul>
+                    <li><a href="#">全部游戏</a></li>
+                    <li>休闲</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 游戏介绍模块 -->
+        <div class="introdution1">
+            <img src="images/index/wuziqi.jpg" class="photo1">
+            <div class="introdutiontext">
+                <p>五子棋古典背景<br>
+                    类型：休闲娱乐<br>
+                    游戏人气：<span>暂无</span></p>
+                <button class="button2"><a href="wuziqi.html">进入游戏</a></button>
+            </div>
+        </div>
+        <div class="introdution2">
+            <img src="images/index/snack.jpg">
+            <div class="introdution2text">
+                <p>
+                    一款简单贪吃蛇游戏<br>
+                    类型：休闲娱乐<br>
+                    游戏人气：<span>暂无</span><br>
+                </p>
+                <button class="button4"><a href="snack.html">进入游戏</a></button>
+            </div>
+        </div>
+        <!-- 新闻公告 -->
+        <div class="news">
+            <div class="newstitle">
+                <p>新闻公告</p>
+                <div class="newstext">
+                    <ul>
+                        <li><a href="wuziqi.html">[五子棋] 初测</a></li>
+                        <li><a href="snack.html">[贪吃蛇] 试运行</a></li>
+                        <li><a href="puzzle.html">[拼图] 简单易懂</a></li>
+                        <li><a href="俄罗斯方块.html">[俄罗斯方块] 简单休闲</a></li>
+                        <li><a href="paino.html">[钢琴块] 操作简单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 休闲娱乐板块 -->
+        <div class="rollplay">
+            <div class="rolltitle">
+                <div class="rolltitletext">
+                    休闲娱乐
+            </div>
+            <div class="rollplaymiddle">
+                <ul>
+                    <li>
+                        <!-- 五子棋 -->
+                        <div class="rollplaypho">
+                            <img src="images/index/wuziqi.jpg">
+                        </div>
+                        <div class="rollplaytext">
+                            <p>
+                                游戏人气：暂无<br>
+                                游戏状态：<span>正常</span><br>
+                                <button class="rollbutton2"><a href="wuziqi.html">进入游戏</a></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 贪吃蛇 -->
+                        <div class="rollplaypho">
+                            <img src="images/index/snack.jpg">
+                        </div>
+                        <div class="rollplaytext">
+                            <p>
+                                游戏人气：暂无<br>
+                                游戏状态：<span>正常</span><br>
+                                <button class="rollbutton2"><a href="snack.html">进入游戏</a></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 拼图 -->
+                        <div class="rollplaypho">
+                            <img src="images/index/puzzle.jpg">
+                        </div>
+                        <div class="rollplaytext">
+                            <p>
+                                游戏人气：暂无<br>
+                                游戏状态：<span>正常</span><br>
+                                <button class="rollbutton2"><a href="puzzle.html">进入游戏</a></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 钢琴块 -->
+                        <div class="rollplaypho">
+                            <img src="images/index/paino.jpg">
+                        </div>
+                        <div class="rollplaytext">
+                            <p>
+                                游戏人气：暂无<br>
+                                游戏状态：<span>正常</span><br>
+                                <button class="rollbutton2"><a href="paino.html">进入游戏</a></button>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 俄罗斯方块 -->
+                        <div class="rollplaypho">
+                            <img src="images/index/eluo.png">
+                        </div>
+                        <div class="rollplaytext">
+                            <p>
+                                游戏人气：暂无<br>
+                                游戏状态：<span>正常</span><br>
+                                <button class="rollbutton2"><a href="俄罗斯方块.html">进入游戏</a></button>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footers">
+            <div class="guanyuwomen">
+                <ul>
+                    <li>关于我们</li>
+                    <li>开放平台</li>
+                    <li>自助广告</li>
+                    <li>招聘</li>
+                    <li>客服</li>
+                    <li>帮助</li>
+                </ul>
+            </div>
+            <div class="wangyezhushi">
+                <ul>
+                    <li>@PHWZYG</li>
+                    <li>京</li>
+                    <li>未成年人家长监护</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
